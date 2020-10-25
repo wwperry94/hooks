@@ -1,20 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { spinner } from './utilities.jsx';
 import { useParams } from 'react-router-dom';
+import { spinner } from './utilities.jsx';
 
 
 export const SinglePerson = () => {
     const [person, setPerson] = useState({});
+    const [loading, setLoading] = useState(false);
+
     const { id } = useParams();
     const getData = async () => {
+        await setLoading(true);
+
         let res = await fetch(`https://ghibliapi.herokuapp.com/people/${id}`);
         let person = await res.json();
-        setPerson(person);
+        await setPerson(person);
+        setLoading(false);
+
     }
     useEffect(async () => {
         getData();
     }, []);
-
+    if (loading) {
+        return spinner();
+    } else {
     return (
         <div className="shadow-lg p-3 mb-5 bg-white rounded">
             <div className="jumbotron jumbotron-fluid">
@@ -26,6 +34,5 @@ export const SinglePerson = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    )}}
 export default SinglePerson;

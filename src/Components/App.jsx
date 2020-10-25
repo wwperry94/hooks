@@ -5,7 +5,7 @@ import People from './People';
 import { SingleFilm } from './SingleFilm';
 import { SinglePerson } from "./SinglePerson";
 import logo from './assets/logo.png';
-
+import kiki from './assets/kiki.gif';
 
 const App = () => {
 
@@ -18,8 +18,8 @@ const App = () => {
                         <Link to="/People" className="btn btn-secondary" style={{ marginRight: "2em", marginTop: "1em", marginBottom: "1em", fontSize: "25px", borderRadius: "20px" }}>Go to People</Link>
                     </nav>
                 </div>
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                    <img src={logo} alt={"this is the logo"} ></img>
+                <div style={{ display: "flex", justifyContent: "center", marginBottom: "1em", backgroundImage: `url(${kiki})` }}>
+                        <img src={logo} alt={"this is the logo"} ></img>
                 </div>
                 <br />
                 <div className="alert alert-dark" role="alert" style={{ display: "flex", justifyContent: "center" }}>
