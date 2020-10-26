@@ -15,7 +15,6 @@ export const SingleFilm = () => {
         let film = await res.json();
         await setFilm(film);
         setLoading(false);
-
     }
     useEffect(async () => {
         getData();

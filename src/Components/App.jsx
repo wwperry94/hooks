@@ -14,8 +14,8 @@ const App = () => {
             <Fragment>
                 <div className="shadow p-3 mb-5 bg-white rounded">
                     <nav className="navbar navbar-dark bg-dark">
-                        <Link to="/films" className="btn btn-secondary" style={{ marginLeft: "2em", marginTop: "1em", marginBottom: "1em", fontSize: "25px", borderRadius: "20px" }}>Go to Films</Link>
-                        <Link to="/People" className="btn btn-secondary" style={{ marginRight: "2em", marginTop: "1em", marginBottom: "1em", fontSize: "25px", borderRadius: "20px" }}>Go to People</Link>
+                        <Link to="/films" className="btn btn-secondary" >Go to Films</Link>
+                        <Link to="/People" className="btn btn-secondary" >Go to People</Link>
                     </nav>
                 </div>
                 <div style={{ display: "flex", justifyContent: "center", marginBottom: "1em", backgroundImage: `url(${kiki})` }}>
