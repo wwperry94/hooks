@@ -22,7 +22,7 @@ const People = () => {
         return (
             dataArr.map((data, idx) => {
             return (<div key={idx} className="shadow-lg p-3 mb-5 bg-white rounded">
-                <div className="card">
+                <div className="card" >
                     <div className="card-body">
                         <h5 className="card-title">{data.name}</h5>
                         <p className="card-text">{data.age}</p>
